@@ -5,8 +5,9 @@ import java.util.Date;
 public class GameDomainModel {
 
   private int id;
-  private Date name;
-  private TeamDomainModel opponents;
+  private Date date;
+  private TeamDomainModel homeTeam;
+  private TeamDomainModel awayTeam;
   private String score;
 
   public int getId() {
@@ -17,20 +18,28 @@ public class GameDomainModel {
     this.id = id;
   }
 
-  public Date getName() {
-    return name;
+  public Date getDate() {
+    return date;
   }
 
-  public void setName(Date name) {
-    this.name = name;
+  public void setDate(Date date) {
+    this.date = date;
   }
 
-  public TeamDomainModel getOpponents() {
-    return opponents;
+  public TeamDomainModel getHomeTeam() {
+    return homeTeam;
   }
 
-  public void setOpponents(TeamDomainModel opponents) {
-    this.opponents = opponents;
+  public void setHomeTeam(TeamDomainModel homeTeam) {
+    this.homeTeam = homeTeam;
+  }
+
+  public TeamDomainModel getAwayTeam() {
+    return awayTeam;
+  }
+
+  public void setAwayTeam(TeamDomainModel awayTeam) {
+    this.awayTeam = awayTeam;
   }
 
   public String getScore() {

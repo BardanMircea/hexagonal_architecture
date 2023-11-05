@@ -7,7 +7,7 @@ public class TeamValueDomainModel {
   private int teamMarketValue;
   private int teamSportValue;
 
-  public int getTeamMarkketValue() {
+  public int getTeamMarketValue() {
     return teamMarketValue;
   }
   public void setTeamMarketValue(int teamMarketValue) {

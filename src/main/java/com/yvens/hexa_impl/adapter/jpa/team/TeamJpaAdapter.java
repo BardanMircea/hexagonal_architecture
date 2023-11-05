@@ -14,7 +14,7 @@ import com.yvens.hexa_impl.domain.port.spi.team.TeamJpaPort;
 public class TeamJpaAdapter implements TeamJpaPort {
 
   private final TeamJpaMapper teamJpaMapper;
-  private TeamRepository teamRepository;
+  private final TeamRepository teamRepository;
 
   public TeamJpaAdapter(TeamJpaMapper teamJpaMapper, TeamRepository teamRepository) {
     this.teamJpaMapper = teamJpaMapper;

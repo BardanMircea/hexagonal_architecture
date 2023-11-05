@@ -1,4 +1,4 @@
-package com.yvens.hexa_impl.application.service.team;
+package com.yvens.hexa_impl.application.service;
 
 import java.util.List;
 
@@ -9,11 +9,11 @@ import com.yvens.hexa_impl.domain.port.api.team.TeamServicePort;
 import com.yvens.hexa_impl.domain.port.spi.team.TeamJpaPort;
 
 @Service
-public class TeamApplicationService implements TeamServicePort {
+public class TeamServiceImpl implements TeamServicePort {
 
   private TeamJpaPort teamJpaPort;
 
-  public TeamApplicationService(TeamJpaPort teamJpaPort) {
+  public TeamServiceImpl(TeamJpaPort teamJpaPort) {
     this.teamJpaPort = teamJpaPort;
   }
 

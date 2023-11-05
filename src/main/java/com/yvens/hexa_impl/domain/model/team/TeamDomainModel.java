@@ -5,10 +5,9 @@ public class TeamDomainModel {
 
   private int id;
   private String name;
-  // private int teamValue;
   private TeamValueDomainModel teamValue;
   private String origin;
-  int nbPlayer = 15;
+  private int nbPlayer = 15;
 
   public TeamDomainModel(int id, String name, String origin) {
     this.id = id;

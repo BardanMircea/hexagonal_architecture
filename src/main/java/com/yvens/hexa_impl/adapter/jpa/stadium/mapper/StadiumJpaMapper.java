@@ -12,7 +12,7 @@ import com.yvens.hexa_impl.domain.model.stadium.StadiumDomainModel;
 public class StadiumJpaMapper {
 
   public StadiumDomainModel toStadiumDomainModel(StadiumEntity stadiumEntity) {
-    return new StadiumDomainModel(stadiumEntity.getId(), stadiumEntity.getName(), stadiumEntity.getCity());
+    return new StadiumDomainModel(stadiumEntity.getId(), stadiumEntity.getName(), stadiumEntity.getCity(), stadiumEntity.getTeam().getName());
   }
 
   public List<StadiumDomainModel> toStadiumDomainModelList(List<StadiumEntity> stadiumEntityList) {

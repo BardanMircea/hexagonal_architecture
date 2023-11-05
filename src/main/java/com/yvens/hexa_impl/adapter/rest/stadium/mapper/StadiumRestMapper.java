@@ -11,11 +11,12 @@ import com.yvens.hexa_impl.domain.model.stadium.StadiumDomainModel;
 @Service
 public class StadiumRestMapper {
 
+
   public List<StadiumDto> toStadiumDtoList(List<StadiumDomainModel> stadiumDomainModelList) {
     List<StadiumDto> stadiumDtoList = new ArrayList<>();
     for (StadiumDomainModel stadiumDomainModel : stadiumDomainModelList) {
       StadiumDto stadiumDto = new StadiumDto(stadiumDomainModel.getId(), stadiumDomainModel.getName(),
-          stadiumDomainModel.getCity());
+          stadiumDomainModel.getCity(), stadiumDomainModel.getTeam());
       stadiumDtoList.add(stadiumDto);
     }
     return stadiumDtoList;
@@ -23,7 +24,7 @@ public class StadiumRestMapper {
 
   public StadiumDto toStadiumDto(StadiumDomainModel stadiumDomainModel) {
     StadiumDto stadiumDto = new StadiumDto(stadiumDomainModel.getId(), stadiumDomainModel.getName(),
-        stadiumDomainModel.getCity());
+        stadiumDomainModel.getCity(), stadiumDomainModel.getTeam());
     return stadiumDto;
   }
 }

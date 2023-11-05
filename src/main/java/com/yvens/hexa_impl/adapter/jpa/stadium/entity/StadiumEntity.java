@@ -1,13 +1,11 @@
 package com.yvens.hexa_impl.adapter.jpa.stadium.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.yvens.hexa_impl.adapter.jpa.team.entity.TeamEntity;
+import jakarta.persistence.*;
+import org.springframework.data.repository.cdi.Eager;
 
 @Entity
-@Table(name = "stadium")
+@Table(name = "stadiums")
 public class StadiumEntity {
 
   @Id
@@ -16,11 +14,25 @@ public class StadiumEntity {
 
   private String name;
   private String city;
+  @OneToOne()
+  @JoinColumn(name = "team_id")
+  private TeamEntity team;
 
   public StadiumEntity(){};
   
-  public StadiumEntity(String name, String city){}
+  public StadiumEntity(String name, String city, TeamEntity team){
+    this.name = name;
+    this.city = city;
+    this.team = team;
+  }
 
+  public TeamEntity getTeam() {
+    return team;
+  }
+
+  public void setTeam(TeamEntity team) {
+    this.team = team;
+  }
 
   public int getId() {
     return id;

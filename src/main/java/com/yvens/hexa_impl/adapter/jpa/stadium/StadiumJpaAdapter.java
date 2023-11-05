@@ -13,8 +13,8 @@ import com.yvens.hexa_impl.domain.port.spi.stadium.StadiumJpaPort;
 @Component
 public class StadiumJpaAdapter implements StadiumJpaPort {
 
-  private StadiumRepository stadiumRepository;
-  private StadiumJpaMapper stadiumJpaMapper;
+  private final StadiumRepository stadiumRepository;
+  private final StadiumJpaMapper stadiumJpaMapper;
 
   public StadiumJpaAdapter(StadiumRepository stadiumRepository, StadiumJpaMapper stadiumJpaMapper) {
     this.stadiumRepository = stadiumRepository;

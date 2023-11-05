@@ -4,17 +4,24 @@ public class StadiumDomainModel {
   private int id;
   private String name;
   private String city;
-  public int getId() {
-    return id;
-  }
+  private String team;
 
-
-  public StadiumDomainModel(int id, String name, String city) {
+  public StadiumDomainModel(int id, String name, String city, String team) {
     this.id = id;
     this.name = name;
     this.city = city;
+    this.team = team;
   }
 
+  public String getTeam() {
+    return team;
+  }
+  public void setTeam(String team) {
+    this.team = team;
+  }
+  public int getId() {
+    return id;
+  }
   public void setId(int id) {
     this.id = id;
   }
