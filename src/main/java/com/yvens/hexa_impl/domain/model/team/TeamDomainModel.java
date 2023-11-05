@@ -1,11 +1,14 @@
 package com.yvens.hexa_impl.domain.model.team;
 
-// Aggregate 
+import com.yvens.hexa_impl.domain.model.stadium.StadiumDomainModel;
+
+// Aggregate
 public class TeamDomainModel {
 
   private int id;
   private String name;
   private TeamValueDomainModel teamValue;
+  private StadiumDomainModel stadium;
   private String origin;
   private int nbPlayer = 15;
 
@@ -13,6 +16,14 @@ public class TeamDomainModel {
     this.id = id;
     this.name = name;
     this.origin = origin;
+  }
+
+  public StadiumDomainModel getStadium() {
+    return stadium;
+  }
+
+  public void setStadium(StadiumDomainModel stadium) {
+    this.stadium = stadium;
   }
 
   public int getId() {

@@ -1,5 +1,6 @@
 package com.yvens.hexa_impl.domain.model.game;
 
+import com.yvens.hexa_impl.domain.model.stadium.StadiumDomainModel;
 import com.yvens.hexa_impl.domain.model.team.TeamDomainModel;
 
 import java.util.Date;
@@ -8,9 +9,19 @@ public class GameDomainModel {
 
   private int id;
   private Date date;
+  private StadiumDomainModel venue;
   private TeamDomainModel homeTeam;
   private TeamDomainModel awayTeam;
   private String score;
+
+
+  public StadiumDomainModel getVenue() {
+    return venue;
+  }
+
+  public void setVenue(StadiumDomainModel venue) {
+    this.venue = venue;
+  }
 
   public int getId() {
     return id;
