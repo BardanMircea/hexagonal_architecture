@@ -16,7 +16,7 @@ public class StadiumRestMapper {
     List<StadiumDto> stadiumDtoList = new ArrayList<>();
     for (StadiumDomainModel stadiumDomainModel : stadiumDomainModelList) {
       StadiumDto stadiumDto = new StadiumDto(stadiumDomainModel.getId(), stadiumDomainModel.getName(),
-          stadiumDomainModel.getCity(), stadiumDomainModel.getTeam());
+          stadiumDomainModel.getCity(), stadiumDomainModel.getTeam().getName());
       stadiumDtoList.add(stadiumDto);
     }
     return stadiumDtoList;
@@ -24,7 +24,7 @@ public class StadiumRestMapper {
 
   public StadiumDto toStadiumDto(StadiumDomainModel stadiumDomainModel) {
     StadiumDto stadiumDto = new StadiumDto(stadiumDomainModel.getId(), stadiumDomainModel.getName(),
-        stadiumDomainModel.getCity(), stadiumDomainModel.getTeam());
+        stadiumDomainModel.getCity(), stadiumDomainModel.getTeam().getName());
     return stadiumDto;
   }
 }

@@ -1,7 +1,5 @@
 package com.yvens.hexa_impl.adapter.rest.stadium.dto;
 
-import com.yvens.hexa_impl.adapter.jpa.team.entity.TeamEntity;
-
 public class StadiumDto {
 
   private int id;

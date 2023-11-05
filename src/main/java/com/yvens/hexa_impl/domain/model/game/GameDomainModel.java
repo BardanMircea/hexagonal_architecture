@@ -1,4 +1,6 @@
-package com.yvens.hexa_impl.domain.model.team;
+package com.yvens.hexa_impl.domain.model.game;
+
+import com.yvens.hexa_impl.domain.model.team.TeamDomainModel;
 
 import java.util.Date;
 

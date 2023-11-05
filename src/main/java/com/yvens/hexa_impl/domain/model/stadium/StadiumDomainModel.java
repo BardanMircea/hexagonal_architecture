@@ -1,22 +1,24 @@
 package com.yvens.hexa_impl.domain.model.stadium;
 
+import com.yvens.hexa_impl.domain.model.team.TeamDomainModel;
+
 public class StadiumDomainModel {
   private int id;
   private String name;
   private String city;
-  private String team;
+  private TeamDomainModel team;
 
-  public StadiumDomainModel(int id, String name, String city, String team) {
+  public StadiumDomainModel(int id, String name, String city, TeamDomainModel team) {
     this.id = id;
     this.name = name;
     this.city = city;
     this.team = team;
   }
 
-  public String getTeam() {
+  public TeamDomainModel getTeam() {
     return team;
   }
-  public void setTeam(String team) {
+  public void setTeam(TeamDomainModel team) {
     this.team = team;
   }
   public int getId() {
